@@ -1,0 +1,307 @@
+/* 全域樣式設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #f39c12; /* 溫暖、警示、專業的黃金色調 */
+    --dark-color: #2c3e50;    /* 深藍灰，建立穩重與安全感 */
+    --light-color: #f8f9fa;
+    --text-color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* 導覽列 */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.logo i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a.btn-nav {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+nav ul li a.btn-nav:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* 主視覺區 (Hero) */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                url('https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-secondary {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: var(--dark-color);
+}
+
+/* 服務項目 */
+.services {
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.services h2, .features h2 {
+    font-size: 36px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: translateY 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+/* 核心優勢 */
+.features .feature-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    background: var(--light-color);
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.feature-item i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.feature-item h3 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+/* 頁尾與聯絡 */
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.footer-info h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+.footer-info i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.btn-call-large {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+.btn-call-large:hover {
+    background-color: #e67e22;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #34495e;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* 行動裝置響應式優化 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
